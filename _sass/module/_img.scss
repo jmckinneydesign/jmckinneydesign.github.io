@@ -1,0 +1,32 @@
+// Logo
+
+.site-logo {
+  @include img-replace("#", 200px, 45px, inline-block);
+  margin:  auto;
+  background-color: $turquoise;
+  // @include mq(desktop){
+  //   margin: 0 0 0 10px;
+  // }
+}
+
+.background-img {
+    @include img-replace("home-background.jpg", 300px, 100px, block);
+    margin: auto;
+}
+
+.carousel-img {
+    max-width: 100%;
+    margin: 0 auto;
+    // position: relative;
+    overflow: hidden;
+    @include mq(desktop){
+        transition: all .5s
+
+        ;
+        &:hover img{
+            transform: scale(1.5);
+        }
+
+    }
+
+}

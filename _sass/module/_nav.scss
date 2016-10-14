@@ -1,0 +1,53 @@
+//=====================================
+//NAV
+//=====================================
+
+
+/*Navigation styles*/
+.nav {
+    background-color: $white;
+    display: -webkit-box;
+    display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+              flex-direction: column;
+    margin-top: .5em;
+      @include mq(tablet)  {
+        background-color: transparent;
+        flex-direction: row;
+        justify-content: space-around;
+      }
+      @include mq(desktop) {
+        align-self: center;
+        margin: 0 0.65em;
+        justify-content: flex-end;
+      }
+      @include e(item) {
+        @extend %nav-item-disp;
+        a {
+          @extend %nav-item-link;
+          @extend %center-align;
+          &:hover {
+            @extend %nav-item-on;
+          }
+        }
+        @include m(current){
+          @extend %nav-item-disp;
+
+          a {
+            @extend %nav-item-link;
+            @extend %center-align;
+            @extend %nav-item-on;
+          }
+        }
+      }
+}
+
+
+
+.contact-list li {
+    text-align: left;
+    margin-bottom: 20px;
+}

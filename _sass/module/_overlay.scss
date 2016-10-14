@@ -1,0 +1,64 @@
+//**********************
+//Overlay
+//**********************
+
+
+.img--overlay {
+    @include mq(desktop){
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 100px;
+        left: 0;
+        opacity: 0;
+        padding-left: 20px;
+    	padding-right: 20px;
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+    	align-items: center;
+        transition-property: opacity;
+        transition-duration: .5s;
+        &:hover {
+            opacity: .85;
+        }
+    }
+
+}
+
+//Overlay colors
+.overlay {
+
+    @include e(cblue){
+        background-color: transparent;
+        @include mq(desktop){
+            background-color: $peter-river;
+        }
+
+    }
+    @include e(cred){
+        background-color: transparent;
+        @include mq(desktop){
+            background-color: $bitter-sweet;
+        }
+
+    }
+    @include e(cgreen){
+        background-color: transparent;
+        @include mq(desktop){
+            background-color: $turquoise;
+        }
+    }
+    @include e(corange){
+        background-color: transparent;
+        @include mq(desktop){
+            background-color: $orange;
+        }
+    }
+    @include e(wet){
+        background-color: transparent;
+        @include mq(desktop){
+            background-color:$wet-asphalt;
+        }
+    }
+}

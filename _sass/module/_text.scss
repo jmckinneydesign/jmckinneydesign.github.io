@@ -1,0 +1,80 @@
+///******************
+//Site text
+//********************
+
+.logo-header  {
+    margin: 0 auto;
+    letter-spacing: 0.2em;
+    display: inline-block;
+    text-align: center;
+    a {
+        color: $white;
+        font-weight: 300;
+        font-size: em(10px);
+    }
+    @include mq(desktop){
+        margin-left: em(20px);
+    }
+}
+
+.main-headline {
+  color: $mine-shaft;
+  font-weight: $font-weight--thin;
+  font-size: 2em;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.sub-headline {
+    text-align: center;
+    color: $cod-gray;
+    font-weight: $font-weight--thin;
+    letter-spacing: 0.1em;
+}
+
+.portfolio-headline{
+    @extend .main-headline;
+    text-align: left;
+
+}
+
+.contact-span {
+    color: $color-black;
+    // text-align: center;
+}
+
+.portfolio-text{
+    color: $rolling-stone;
+    font-weight: $font-weight--thin;
+    // letter-spacing: 0.1em;
+}
+
+.overlay{
+    @include e(header){
+        font-weight: $font-weight--thin;
+        color: $rolling-stone;
+        opacity: 1;
+        font-size: em(24px);
+        margin: 0;
+        text-align: center;
+        @include mq(desktop){
+            line-height: 1;
+            font-size: em(24px);
+            color: $white;
+            border-bottom: solid 2px $white;
+        }
+
+    }
+    @include e(text){
+        display: none;
+        font-weight: $font-weight--medium;
+        color: $color-black;
+        opacity: 1;
+        text-align: center;
+        font-size: em(12px);
+        @include mq(desktop){
+            font-size: em(16px);
+            color: $white;
+        }
+    }
+}//end overlay

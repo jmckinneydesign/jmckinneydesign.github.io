@@ -1,0 +1,174 @@
+* {
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+	height: 100%;
+}
+
+body {
+	color: palette(grey);
+    font-size: $base__font-size;
+    font-family: $font-family--primary;
+    line-height: ($base__line/$base__font-size);
+	height: 100%;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {}
+
+h4 {}
+
+
+a {
+	color: palette(grey, dark);
+	text-decoration: none;
+	font-weight: $font-weight--medium;
+}
+
+p {
+	font-size: em(18px);
+	color: $color-black;
+}
+
+blockquote {
+	font-size: em(18px);
+	font-style: italic;
+	font-weight: $font-weight--medium;
+	margin: em(32px, 24px) 0;
+	padding: 0 0 0 5%;
+	color: $color-black;
+	border-left: 4px solid  palettes(silver, x-dark);
+}
+
+// Lists
+
+ul,
+li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+//Form Elements
+input,
+textarea {
+	display: block;
+	padding: 10px;
+	width: 100%;
+	outline: 0;
+	border: 0;
+
+}
+
+input:focus,
+textarea:focus {
+	transition: $trns_duration;
+}
+
+select {
+	display: inline-block;
+	margin: 10px;
+}
+
+input[type=checkbox] {
+	display: inline-block;
+	width: auto;
+}
+
+// Button
+
+button {
+  outline: 0;
+}
+
+//Small
+
+small {
+	display: block;
+	text-align: center;
+	margin-top: em(20px);
+	@include mq(tablet){
+		display: inline-block;
+		margin-top: 0;
+		margin-right: em(50px);
+	}
+}
+
+// footer
+
+footer {
+  border-top: 2px solid palette(grey, xx-light);
+
+}
+
+
+//Header
+
+#header {
+	background-color: $peter-river;
+	display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: em(10px);
+	@include mq(tablet) {
+		-webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+	}
+	@include mq(desktop){
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		    -ms-flex-direction: row;
+		        flex-direction: row;
+	}
+}
+
+#mainNav {
+	display: none;
+	@include mq(tablet){
+		display: block;
+	}
+}
+
+#footerNav{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: auto;
+	font-size: em(12px);
+	li {
+		text-align: center;
+	}
+	@include mq(tablet){
+
+	}
+}
+
+//Footer
+#footer {
+	border-top: solid 1px $peter-river;
+	padding: em(20px);
+	margin-bottom: em(10px);
+	@include mq(tablet){
+		padding: em(20px);
+		margin: em(10px);
+	}
+	a {
+		color: $peter-river;
+	}
+
+
+}

@@ -1,0 +1,106 @@
+.container {
+    width: 100%;
+    height: auto;
+    margin: 20px auto;
+    padding: 0 20px;
+    @include mq(tablet){
+        width: 90%;
+    }
+    @include mq(desktop){
+        width: em(1000px);
+        min-height: em(700px);
+    }
+}
+
+.svg--container {
+    width: em(85px);
+    margin: auto;
+    @include mq(tablet){
+        width: em(150px);
+    }
+    @include mq(desktop){
+        width: 90px;
+        margin-left: 100px;
+    }
+}
+
+.footer--container{
+    width: 90%;
+    margin: auto;
+    @include mq(tablet){
+        width: 80%;
+    }
+}
+
+.portfolio--container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+        @include mq(tablet){
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+
+}
+
+.img--container {
+    background-color: $white;
+    margin: 0 auto;
+    max-width: em(500px);
+    // height: em(300px);
+    position: relative;
+        @include mq(tablet){
+            width: em(300px);
+            height: em(400px);
+            margin-bottom: em(10px);
+        }
+        @include mq(desktop){
+            width: em(450px);
+            margin-bottom: em(20px);
+            height: em(400px);
+        }
+}
+
+//slick content styles
+.slick--container {
+    width: 90%;
+    // height: 300px;
+    margin: auto;
+    border-top: solid 2px $peter-river;
+    border-bottom: solid 2px $peter-river;
+}
+
+.img {
+    width: 100%;
+}
+
+
+.img-container {
+    max-width: 800px;
+    margin: 20px;
+    -webkit-box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.5);
+    box-shadow: 0px 10px 20px -5px rgba(0,0,0,0.5);
+
+}
+
+section {
+    @include outer-container;
+        .about{
+                @include span-columns(12);
+        }
+        .contact {
+            @include span-columns (12);
+        }
+        @include mq(tablet){
+            .about {
+                @include span-columns(7);
+            }
+            .contact {
+                @include span-columns(5);
+            }
+        }
+
+
+}

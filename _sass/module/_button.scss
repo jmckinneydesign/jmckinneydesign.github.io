@@ -1,0 +1,19 @@
+.btn {
+    @extend %btn;
+    color: $peter-river;
+    font-size: em(16px);
+    width: auto;
+    background-color: $white;
+    @include mq(tablet){
+        font-size: em(14px);
+        padding: 5px 10px;
+    }
+
+    @include e(centered){
+        margin: em(20px) auto;
+    }
+}
+
+.icon-btn {
+    @extend %icon-btn;
+}

@@ -1,0 +1,65 @@
+//Rules for centering icons
+.material-icons {
+    vertical-align: middle;
+}
+
+//Rules for inline material-icons
+
+.material-icons.md-inline{
+    display: inline-block;
+}
+
+/* Rules for sizing the icon. */
+.material-icons.md-18 { font-size: 18px; }
+.material-icons.md-24 { font-size: 24px; }
+.material-icons.md-36 { font-size: 36px; }
+.material-icons.md-48 { font-size: 48px; }
+
+/* Rules for using icons as black on a light background. */
+.material-icons.md-dark {
+  color: rgba(0, 0, 0, 0.54);
+  &:hover {
+    @extend .md-green;
+  }
+ }
+.material-icons.md-dark.md-inactive { color: rgba(0, 0, 0, 0.26); }
+
+/* Rules for using icons as white on a dark background. */
+.material-icons.md-light { color: rgba(255, 255, 255, 1); }
+.material-icons.md-light.md-inactive { color: rgba(255, 255, 255, 0.3); }
+
+.material-icons.md-green{
+    color: $turquoise;
+}
+
+.material-icons.md-blue{
+    color: $peter-river;
+}
+
+#toggle{
+  @include mq(tablet){
+      display: none;
+  }
+}
+
+.material-icons.arrow-animation{
+
+    @include animation(slide 0.8s ease-out infinite);
+
+
+}//end arrow-animation
+
+
+@include keyframes (slide) {
+    from {
+    @include transform(translateY(5px));
+  }
+
+  70% {
+    @include transform(translateY(-3px));
+  }
+
+  to {
+    @include transform(translateY(3px));
+  }
+};

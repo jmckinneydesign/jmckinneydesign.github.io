@@ -1,0 +1,110 @@
+.accordion {
+    $base-border-color: gainsboro !default;
+    $base-line-height: 1.5em !default;
+    $base-spacing: 0 !default;
+    $dark-gray: #333 !default;
+    $base-font-color: $dark-gray !default;
+    $accordion-menu-border-color: $base-border-color;
+    $accordion-menu-color: $base-font-color;
+    $accordion-menu-border: 1px solid $white;
+    $accordion-menu-background: lighten($accordion-menu-border-color, 10%);
+    $accordion-menu-hover: lighten($accordion-menu-background, 2%);
+    $accordion-menu-sub-background: $clouds;
+    $accordion-menu-sub-inset: darken($accordion-menu-sub-background, 6%);
+    $accordion-menu-sub-hover: lighten($accordion-menu-sub-background, 5%);
+    $accordion-menu-list-padding: ($base-spacing / 2) $gutter;
+
+    background-color: $accordion-menu-background;
+    border: $accordion-menu-border;
+    margin: 0 0 $base-spacing 0;
+    padding: 0;
+
+    @include mq(tablet){
+        background-color: $peter-river;
+        border: none;
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        background-color: $white;
+        list-style: none;
+        padding: 10px;
+        @include mq(tablet){
+            background-color: $peter-river;
+            margin-left: em(40px);
+        }
+        @include mq(desktop){
+            margin-left: 0;
+        }
+
+    > a {
+          color: $accordion-menu-color;
+          display: block;
+          padding: $accordion-menu-list-padding;
+          text-decoration: none;
+          @include mq(tablet){
+              color: $white;
+          }
+    }
+
+    &:last-child {
+      border: 0;
+    }
+
+    &:focus,
+    &:hover {
+        // background-color: $accordion-menu-hover;
+        }
+    }
+
+    ul.submenu {
+        display: none;
+        @include mq(tablet){
+            position: absolute;
+            z-index: 1000;
+            margin-right: em(10px);
+        }
+        @include mq(desktop){
+            margin-right: em(15px);
+        }
+    li {
+      background-color: $accordion-menu-sub-background;
+    //   position: absolute;
+      @include mq(tablet){
+          z-index: 1000;
+      }
+
+      > a {
+            color: $color-black;
+            @include mq(tablet){
+                font-size: em(14px);
+            }
+      }
+
+          &:first-child {
+            // border-top: $accordion-menu-border;
+            // box-shadow: inset 0 1px 1px $accordion-menu-sub-inset;
+            @include mq(tablet){
+                margin-top: em(7px);
+            }
+            @include mq(desktop){
+                margin-top: em(12px);
+            }
+          }
+
+          &:focus,
+          &:hover {
+            background-color: $accordion-menu-sub-hover;
+            }
+        }
+    }
+
+    .is-expanded {
+        display: block;
+        padding-bottom: 0;
+    }
+}

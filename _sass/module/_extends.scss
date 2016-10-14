@@ -1,0 +1,81 @@
+// ==========================================================================
+// Placeholders
+// ==========================================================================
+
+// Nav Items
+
+%nav-item-disp {
+  display: block;
+}
+
+%nav-item-link {
+  display: block;
+  font-weight: $font-weight--thin;
+  font-size: em(16px);
+  padding: .4em;
+  color: $rolling-stone;
+  // border-bottom: solid 1px $porcelain;
+  @include mq(tablet){
+    color: $white;
+    border-bottom: transparent;
+    font-size: em(18px);
+    letter-spacing: 0.1em;
+  }
+  @include mq(desktop){
+      margin-top: 10px;
+  }
+
+}
+
+%nav-item-on {
+  color: palette(black);
+  @include mq(tablet){
+      color: $white;
+  }
+  @include mq(desktop){
+    // border-bottom: solid 2px $white;
+  }
+
+}
+
+//===========
+//Text-Button
+//===========
+%btn {
+  padding: 10px 20px;
+  border: solid 2px $peter-river;
+  border-radius: 3px;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: $font-weight--medium;
+  display: block;
+  a{
+      color: $peter-river;
+  }
+  &:hover {
+      background-color: $peter-river;
+      a{
+          color: $white;
+      }
+  }
+  &:active.mataerial-icons {
+      background-color: $turquoise;
+      color: $white;
+    opacity: initial;
+  }
+}
+
+//============
+//Icon Buttons
+//============
+
+%icon-btn {
+  padding: 0;
+  margin: 5px 0;
+  border: none;
+  background-color: transparent;
+  text-transform: uppercase;
+  &:hover {
+    opacity: .75;
+  }
+}
