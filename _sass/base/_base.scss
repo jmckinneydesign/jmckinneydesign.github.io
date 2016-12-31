@@ -55,7 +55,7 @@ ul,
 li {
   margin: 0;
   padding: 0;
-  list-style-type: none;
+
 }
 
 //Form Elements
@@ -151,6 +151,7 @@ footer {
 	font-size: em(12px);
 	li {
 		text-align: center;
+		list-style-type: none;
 	}
 	@include mq(tablet){
 

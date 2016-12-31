@@ -32,6 +32,13 @@
     color: $turquoise;
 }
 
+.material-icons.md-arrow{
+    color: $turquoise;
+    @include mq(desktop){
+        color:$white;
+    }
+}
+
 .material-icons.md-blue{
     color: $peter-river;
 }

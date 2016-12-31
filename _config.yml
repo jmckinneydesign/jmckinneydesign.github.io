@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-gems: [jekyll-assets, bourbon, neat]
+gems: [jekyll-assets, bourbon, neat, autoprefixer-rails]
 
 title: John McKinney Architecture Design
 email: john.mckinney28@gmail.com

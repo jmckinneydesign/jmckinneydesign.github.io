@@ -38,6 +38,12 @@
 
 }
 
+.small-print {
+    font-size: em(12px);
+    color: $rolling-stone;
+    text-align: center;
+}
+
 .contact-span {
     color: $color-black;
     // text-align: center;
@@ -46,7 +52,9 @@
 .portfolio-text{
     color: $rolling-stone;
     font-weight: $font-weight--thin;
-    // letter-spacing: 0.1em;
+    ul {
+        list-style-type: square;
+    }
 }
 
 .overlay{
