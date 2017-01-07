@@ -91,22 +91,22 @@
 
 }
 
-section {
-    @include outer-container;
-        .about{
-                @include span-columns(12);
-        }
-        .contact {
-            @include span-columns (12);
-        }
-        @include mq(tablet){
-            .about {
-                @include span-columns(7);
-            }
-            .contact {
-                @include span-columns(5);
-            }
-        }
+//container for columnContainer
+.contentContainer{
+    display: flex;
+    margin: auto;
+    flex-flow: column;
+    @include mq(tablet){
+        flex-flow: row;
+        justify-content: space-around;
+    }
 
+}
 
+//container for individual columns to be used with flex container
+.columnContainer{
+    display: block;
+    @include mq(desktop){
+        width: 45%;
+    }
 }
